@@ -12,14 +12,13 @@ let num2 = Math.ceil(Math.random()*60)
 firstNumber.textContent = num1;
 secondNumber.textContent = num2;
 let total = num1 + num2;
-// console.log(userInput.value);
 
 checkButton.addEventListener("click", function(){
 
     if (parseInt(userInput.value) === total){
-        // console.log(userInput.value)
         gameResult.textContent = "Congratulations! You Got It Right!";
-        gameResult.style.backgroundColor = "Green";
+        gameResult.style.color = "Green";
+        gameResult.style.fontWeight = "bold"
         errMessage.textContent = "";
     }else if (userInput.value === ""){
         errMessage.textContent = "Required*"
@@ -28,7 +27,8 @@ checkButton.addEventListener("click", function(){
     }
     else{
         gameResult.textContent = "Please Try Again!";
-        gameResult.style.backgroundColor = "red"; 
+        gameResult.style.color = "red"; 
+        gameResult.style.fontWeight = "bold"
         errMessage.textContent = "";
     }
 });
